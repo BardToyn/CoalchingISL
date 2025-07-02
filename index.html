@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoalchingLab</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <!-- Логотип -->
+                <img class="header__logo-img" src="img/logo.png" alt="CoalchingLab">
+            </div>
+            <nav class="header__nav">
+                <a class="header__nav-link" href="#">Главная</a>
+                <a class="header__nav-link" href="#">О нас</a>
+                <a class="header__nav-link" href="#">Услуги</a>
+                <a class="header__nav-link" href="#">Команда</a>
+                <a class="header__nav-link" href="#">Контакты</a>
+            </nav>
+            <div class="header__social">
+                <a class="header__social-link" href="#">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a class="header__social-link" href="#">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <a class="header__button" href="#">Войти</a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Добро пожаловать в наше пространство</h1>
+                <p class="hero__subtitle">Мир коучинга для вас</p>
+                <div class="hero__actions">
+                    <a class="hero__button hero__button--primary" href="#">Записаться</a>
+                    <a class="hero__button hero__button--secondary" href="#">Подробнее</a>
+                </div>
+                <div class="hero__video">
+                    <!-- Здесь будет видео или картинка-превью -->
+                    <img class="hero__video-img" src="img/hero-video.jpg" alt="Видео">
+                    <button class="hero__video-play" aria-label="Смотреть видео">▶</button>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="reviews__container">
+                <h2 class="reviews__title">Видео-отзывы клиентов</h2>
+                <div class="reviews__list">
+                    <div class="reviews__item">
+                        <img class="reviews__item-img" src="img/client1.jpg" alt="Клиент 1">
+                        <p class="reviews__item-name">Имя клиента</p>
+                    </div>
+                    <!-- ... ещё отзывы ... -->
+                </div>
+            </div>
+        </section>
+        <section class="cards">
+            <div class="cards__container">
+                <div class="cards__item">Оценка перспектив развития проекта</div>
+                <div class="cards__item">Карточка 2</div>
+                <!-- ... -->
+            </div>
+        </section>
+        <section class="team">
+            <div class="team__container">
+                <h2 class="team__title">Наша команда</h2>
+                <div class="team__list">
+                    <div class="team__item">
+                        <img class="team__item-img" src="img/team1.jpg" alt="Сотрудник">
+                        <p class="team__item-name">Имя</p>
+                    </div>
+                    <!-- ... ещё сотрудники ... -->
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="services__container">
+                <h2 class="services__title">Наши услуги</h2>
+                <div class="services__list">
+                    <div class="services__item">Индивидуальный коучинг</div>
+                    <div class="services__item">Групповой коучинг</div>
+                    <!-- ... -->
+                </div>
+            </div>
+        </section>
+        <section class="education">
+            <div class="education__container">
+                <h2 class="education__title">Обучение коучингу</h2>
+                <div class="education__content">...</div>
+            </div>
+        </section>
+        <section class="shop">
+            <div class="shop__container">
+                <h2 class="shop__title">Магазин коучинговой литературы</h2>
+                <div class="shop__content">...</div>
+            </div>
+        </section>
+        <section class="club-blog">
+            <div class="club-blog__container">
+                <div class="club-blog__club">Клуб CL</div>
+                <div class="club-blog__blog">Наш блог</div>
+            </div>
+        </section>
+        <section class="events">
+            <div class="events__container">
+                <h2 class="events__title">Мероприятия</h2>
+                <div class="events__list">...</div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contacts">Контакты</div>
+            <form class="footer__form">
+                <input class="footer__form-input" type="text" placeholder="Имя">
+                <input class="footer__form-input" type="email" placeholder="Email">
+                <textarea class="footer__form-textarea" placeholder="Сообщение"></textarea>
+                <button class="footer__form-button" type="submit">Отправить</button>
+            </form>
+        </div>
+        <div class="footer__copyright">
+            &copy; 2025 CoalchingLab
+        </div>
+    </footer>
+</body>
+</html>
