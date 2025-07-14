@@ -1,0 +1,262 @@
+.header__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background: var(--clr-white);
+
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.header__fixed--wrap {
+    padding: 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__fixed--visible {
+    transform: translateY(0);
+}
+
+.header__wrapper {
+    padding: 24px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo .logo {
+    height: 72px;
+    width: 72px;
+    object-fit: cover;
+}
+
+.header__menu-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__menu-link {
+    color: var(--clr-black);
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__socials {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__socials-link {
+    height: 24px;
+    width: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    background-color: var(--clr-blue);
+}
+
+.header__socials-link:hover {
+    background-color: var(--clr-blue-hover);
+}
+
+.header__socials-icon {
+    height: 14px;
+    width: 14px;
+}
+
+.header__btn-burger {
+    padding: 4px;
+
+    display: none;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.header__burger-img {
+    height: 32px;
+    width: 32px;
+}
+
+.header__burger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    width: 100%;
+
+    background-color: var(--clr-white);
+
+    visibility: hidden;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    z-index: 1000;
+
+    transition: .6s ease-in-out;
+}
+
+.header__burger-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.header__burger-wrapper {
+    padding: 14px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.header__btn-close {
+    align-self: end;
+
+    padding: 4px;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.header__burger-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__burger-item {
+    padding-left: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--clr-white-hover);
+}
+
+.header__burger-item:not(:first-child) {
+    padding-top: 18px;
+}
+
+.header__burger-link {
+    color: var(--clr-black);
+
+    font-size: 1rem;
+}
+
+.header__burger-btn {
+    margin: 32px 0;
+
+    align-self: center;
+}
+
+.header__burger-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.header__burger-tel {
+    color: var(--clr-black);
+
+    font-size: 1rem;
+}
+
+.header__burger-socials {
+    padding: 24px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__social-link {
+    padding: 4px;
+
+    color: var(--clr-black);
+
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1380px) {
+
+    .header__logo .logo {
+        height: 64px;
+        width: 64px;
+    }
+    
+    .header__socials {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    .header__menu-list {
+        gap: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header__wrapper {
+        padding: 14px 0;
+    }
+
+    .header__logo .logo {
+        height: 52px;
+        width: 52px;
+    }
+
+    .header__menu-list {
+        display: none;
+    }
+
+    .header__buttons {
+        display: none;
+    }
+
+    .header__btn-burger {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 438px) {
+    .header {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+    }
+}

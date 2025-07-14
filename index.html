@@ -1,135 +1,899 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoalchingLab</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script src="./scripts/header.js" defer></script>
+    <script src="./scripts/hero.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/rewiewsSwiper.js" defer></script>
+    <title>Coalching ISL</title>
 </head>
 <body>
+<!--header start-->
     <header class="header">
-        <div class="header__container">
-            <div class="header__logo">
-                <!-- Логотип -->
-                <img class="header__logo-img" src="img/logo.png" alt="CoalchingLab">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <img src="./assets/default_content/logo.webp" alt="logo" class="logo">
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">О нас</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Команда</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Услуги</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Обучение</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Магазин ISL</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Расписание</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Блог</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <ul class="header__socials">
+                        <li class="header__socials-item">
+                            <a href="#" class="header__socials-link">
+                                <img class="header__socials-icon" src="./assets/icons/vk.svg" alt="vk">
+                            </a>
+                        </li>
+                        <li class="header__socials-item">
+                            <a href="#" class="header__socials-link">
+                                <img class="header__socials-icon" src="./assets/icons/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li class="header__socials-item">
+                            <a href="#" class="header__socials-link">
+                                <img class="header__socials-icon" src="./assets/icons/youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="header__button btn btn__blue">Связаться с нами</button>
+                </div>
+                <button class="header__btn-burger" id="openBurger">
+                    <img src="./assets/icons/menu.svg" alt="меню" class="header__burger-img">
+                </button>
             </div>
-            <nav class="header__nav">
-                <a class="header__nav-link" href="#">Главная</a>
-                <a class="header__nav-link" href="#">О нас</a>
-                <a class="header__nav-link" href="#">Услуги</a>
-                <a class="header__nav-link" href="#">Команда</a>
-                <a class="header__nav-link" href="#">Контакты</a>
-            </nav>
-            <div class="header__social">
-                <a class="header__social-link" href="#">
-                    <img src="img/facebook.png" alt="Facebook">
-                </a>
-                <a class="header__social-link" href="#">
-                    <img src="img/instagram.png" alt="Instagram">
-                </a>
+        </div>
+
+        <div class="header__burger-menu">
+            <div class="container">
+                <div class="header__burger-wrapper">
+                    <button class="header__btn-close" id="closeBurger">
+                        <img src="./assets/icons/close.svg" alt="закрыть меню" class="header__burger-img">
+                    </button>
+                    <ul class="header__burger-list">
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Команда
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Обучение
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Магазин ISL
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Расписание
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Блог
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a href="#" class="header__burger-link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="btn btn__blue header__burger-btn">
+                        Связаться с нами
+                    </button>
+                    <div class="header__burger-info">
+                        <a href="tel:+78005553555" class="header__burger-tel">
+                            Дубай: +7 (800) 555 35-55
+                        </a>
+                        <a href="tel:+78005553555" class="header__burger-tel">
+                            Россия: +7 (800) 555 35-55
+                        </a>
+                    </div>
+                    <div class="header__burger-socials">
+                        <a href="#" class="header__social-link">
+                            vkontakte
+                        </a>
+                        <a href="#" class="header__social-link">
+                            instagram
+                        </a>
+                        <a href="#" class="header__social-link">
+                            youtube
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="header__button" href="#">Войти</a>
         </div>
     </header>
+
+    <header class="header__fixed">
+        <div class="container">
+            <div class="header__fixed--wrap">
+                <div class="header__logo">
+                    <img src="./assets/default_content/logo.webp" alt="logo" class="logo">
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">О нас</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Команда</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Услуги</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Обучение</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Магазин ISL</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Расписание</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Блог</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <ul class="header__socials">
+                        <li class="header__socials-item">
+                            <a href="#" class="header__socials-link">
+                                <img class="header__socials-icon" src="./assets/icons/vk.svg" alt="vk">
+                            </a>
+                        </li>
+                        <li class="header__socials-item">
+                            <a href="#" class="header__socials-link">
+                                <img class="header__socials-icon" src="./assets/icons/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li class="header__socials-item">
+                            <a href="#" class="header__socials-link">
+                                <img class="header__socials-icon" src="./assets/icons/youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="header__button btn btn__blue">Связаться с нами</button>
+                </div>
+                <button class="header__btn-burger" id="openBurger">
+                    <img src="./assets/icons/menu.svg" alt="меню" class="header__burger-img">
+                </button>
+            </div>
+        </div>
+    </header>
+<!--header end-->
+
+<!--main start-->
     <main class="main">
-        <section class="hero">
-            <div class="hero__container">
-                <h1 class="hero__title">Добро пожаловать в наше пространство</h1>
-                <p class="hero__subtitle">Мир коучинга для вас</p>
-                <div class="hero__actions">
-                    <a class="hero__button hero__button--primary" href="#">Записаться</a>
-                    <a class="hero__button hero__button--secondary" href="#">Подробнее</a>
-                </div>
-                <div class="hero__video">
-                    <!-- Здесь будет видео или картинка-превью -->
-                    <img class="hero__video-img" src="img/hero-video.jpg" alt="Видео">
-                    <button class="hero__video-play" aria-label="Смотреть видео">▶</button>
-                </div>
-            </div>
-        </section>
-        <section class="reviews">
-            <div class="reviews__container">
-                <h2 class="reviews__title">Видео-отзывы клиентов</h2>
-                <div class="reviews__list">
-                    <div class="reviews__item">
-                        <img class="reviews__item-img" src="img/client1.jpg" alt="Клиент 1">
-                        <p class="reviews__item-name">Имя клиента</p>
+        <section class="hero section">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__content">
+                        <article class="hero__article">
+                            <h1 class="hero__title">
+                                Добро пожаловать в наше пространство 
+                            </h1>
+                            <h4 class="hero__subtitle">
+                                INSIGHT SPARK COACHING LAB
+                            </h4>
+                            <p class="hero__text">
+                                Это коучинговая лаборатория нового поколения, где метафора, наука и личность соединяются в одном методе: образно-трансформационном коучинге. Центр в Дубае — амбиции по всему миру.
+                            </p>
+                        </article>
+                        <div class="hero__buttons">
+                            <a class="hero__button btn btn__blue">
+                                О нас
+                            </a>
+                            <a class="hero__button btn btn__white">
+                                Связаться с нами
+                            </a>
+                        </div>
+                        <div class="hero__video-wrapper">
+                            <video class="hero__video-element" id="heroVideo" poster="assets/default_content/video_wallpaper.webp">
+                                <source src="./assets/default_content/video.mp4" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <button class="hero__video-play" id="playHeroVideo" aria-label="Воспроизвести видео">
+                                <img src="./assets/icons/play.svg" alt="воспроизведение" class="hero__video-icon">
+                            </button>
+                        </div>
                     </div>
-                    <!-- ... ещё отзывы ... -->
+                    <img src="./assets/default_content/hero_bg.png" alt="hero bg" class="hero__bg">
                 </div>
             </div>
         </section>
-        <section class="cards">
-            <div class="cards__container">
-                <div class="cards__item">Оценка перспектив развития проекта</div>
-                <div class="cards__item">Карточка 2</div>
-                <!-- ... -->
-            </div>
-        </section>
-        <section class="team">
-            <div class="team__container">
-                <h2 class="team__title">Наша команда</h2>
-                <div class="team__list">
-                    <div class="team__item">
-                        <img class="team__item-img" src="img/team1.jpg" alt="Сотрудник">
-                        <p class="team__item-name">Имя</p>
+        <section class="rewiews section">
+            <div class="container">
+                <div class="rewiews__wrapper">
+                    <div class="rewiews__content">
+                        <article class="rewiews__article">
+                            <h2 class="rewiews__title">
+                                Видео-отзывы клиентов
+                            </h2>
+                            <p class="rewiews__text">
+                                Наши клиенты – лучшая подтверждение эффективности нашей работы. Здесь вы можете ознакомиться с их реальными впечатлениями, результатами и успехами. Мы гордимся тем, что помогаем людям развивать осознанность, укреплять личные и профессиональные навыки и находить новые решения в жизни.
+                            </p>
+                        </article>
+                        <a class="rewiews__button btn btn__white">
+                            Оставить отзыв
+                        </a>
                     </div>
-                    <!-- ... ещё сотрудники ... -->
+                    <div class="swiper rewiews__swiper">
+                        <div class="swiper-wrapper rewiews__swiper-wrapper">
+                            <div class="swiper-slide rewiews__swiper-slide">
+                                <div class="rewiews__slide-wrapper">
+                                    <div class="rewiews__picture">
+                                        <img src="./assets/default_content/example_rewiews.webp" alt="фото отзыва" class="rewiews__slide-img">
+                                        <div class="rewiews__picture--linear"></div>
+                                    </div>
+                                    <article class="rewiews__slide-article">
+                                        <h4 class="rewiews__slide-title">
+                                            Иван Иванов
+                                        </h4>
+                                        <p class="rewiews__slide-subtitle">
+                                            Программист
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rewiews__swiper-slide">
+                                <div class="rewiews__slide-wrapper">
+                                    <div class="rewiews__picture">
+                                        <img src="./assets/default_content/example_rewiews.webp" alt="фото отзыва" class="rewiews__slide-img">
+                                        <div class="rewiews__picture--linear"></div>
+                                    </div>
+                                    <article class="rewiews__slide-article">
+                                        <h4 class="rewiews__slide-title">
+                                            Иван Иванов
+                                        </h4>
+                                        <p class="rewiews__slide-subtitle">
+                                            Программист
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rewiews__swiper-slide">
+                                <div class="rewiews__slide-wrapper">
+                                    <div class="rewiews__picture">
+                                        <img src="./assets/default_content/example_rewiews.webp" alt="фото отзыва" class="rewiews__slide-img">
+                                        <div class="rewiews__picture--linear"></div>
+                                    </div>
+                                    <article class="rewiews__slide-article">
+                                        <h4 class="rewiews__slide-title">
+                                            Иван Иванов
+                                        </h4>
+                                        <p class="rewiews__slide-subtitle">
+                                            Программист
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rewiews__swiper-slide">
+                                <div class="rewiews__slide-wrapper">
+                                    <div class="rewiews__picture">
+                                        <img src="./assets/default_content/example_rewiews.webp" alt="фото отзыва" class="rewiews__slide-img">
+                                        <div class="rewiews__picture--linear"></div>
+                                    </div>
+                                    <article class="rewiews__slide-article">
+                                        <h4 class="rewiews__slide-title">
+                                            Иван Иванов
+                                        </h4>
+                                        <p class="rewiews__slide-subtitle">
+                                            Программист
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rewiews__swiper-slide">
+                                <div class="rewiews__slide-wrapper">
+                                    <div class="rewiews__picture">
+                                        <img src="./assets/default_content/example_rewiews.webp" alt="фото отзыва" class="rewiews__slide-img">
+                                        <div class="rewiews__picture--linear"></div>
+                                    </div>
+                                    <article class="rewiews__slide-article">
+                                        <h4 class="rewiews__slide-title">
+                                            Иван Иванов
+                                        </h4>
+                                        <p class="rewiews__slide-subtitle">
+                                            Программист
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next rewiews__button rewiews__button-next"></div>
+                        <div class="swiper-button-prev rewiews__button rewiews__button-prev"></div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="services">
-            <div class="services__container">
-                <h2 class="services__title">Наши услуги</h2>
-                <div class="services__list">
-                    <div class="services__item">Индивидуальный коучинг</div>
-                    <div class="services__item">Групповой коучинг</div>
-                    <!-- ... -->
+        <section class="course section">
+            <div class="container">
+                <div class="course__wrapper">
+                    <img class="course__image" src="./assets/default_content/example_course.webp" alt="course">
+                    <div class="course__content">
+                        <article class="course__article">
+                            <h2 class="course__title">
+                                Оценка перспектив развития проекта
+                            </h2>
+                            <p class="course__text">
+                                Тест с описанием теста, тест будет открываться в модальном окне, ориентировочно планируется ставить платный виджет “марквиз” также можно и самописное решение, но это дольше и дороже.
+                            </p>
+                            <a href="#" class="btn btn__blue">
+                                забрать гайд
+                            </a>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="education">
-            <div class="education__container">
-                <h2 class="education__title">Обучение коучингу</h2>
-                <div class="education__content">...</div>
+        <section class="about section">
+            <div class="container">
+                <div class="about__wrapper">
+                    <article class="about__article">
+                        <h2 class="about__title">
+                            О нас
+                        </h2>
+                        <p class="about__text">
+                            Наша миссия - создавать международное пространство, где люди через образы, метафоры и коучинг распаковывают свою личность, силу и потенциал, чтобы становиться собой в лучшем смысле этого слова — осознанными, устойчивыми, яркими.
+                        </p>
+                        <div class="about__buttons">
+                            <a class="about__button btn btn__blue">
+                                Обучение коучингу
+                            </a>
+                            <a class="about__button btn btn__white">
+                                Календарь мероприятий
+                            </a>
+                        </div>
+                    </article>
+                    <img class="about__image" src="#" alt="about">
+                    <div class="about__content">
+                        <div class="about__content-item">
+                            <h3 class="about__content-title">
+                                Коучинг
+                            </h3>
+                            <ul class="about__content-list">
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Коучинг личных отношений
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Коучинг профессионального развития
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Коучинг личной эффективности
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        И многое другое
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="about__content-item">
+                            <h3 class="about__content-title">
+                                Обучение
+                            </h3>
+                            <ul class="about__content-list">
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Обучение коучингу с применением МАК
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Обучение лайф-коучингу отношений в паре
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Обучение бизнес консалтингу и коучингу
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        И многое другое
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="about__content-item">
+                            <h3 class="about__content-title">
+                                Трансформационные игры:
+                            </h3>
+                            <ul class="about__content-list">
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Психологическая игра «Психомафия»
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Коучинговая игра «Грани конфликта»
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        Трансформационная игра «Жизнь»
+                                    </p>
+                                </li>
+                                <li class="about__content-item">
+                                    <p class="about__content-text">
+                                        И многое другое
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="shop">
-            <div class="shop__container">
-                <h2 class="shop__title">Магазин коучинговой литературы</h2>
-                <div class="shop__content">...</div>
+        <section class="team section">
+            <div class="container">
+                <div class="team__wrapper">
+                    <article class="team__article">
+                        <h2 class="team__title">
+                            Наша команда
+                        </h2>
+                        <p class="team__text">
+                            Наша команда - это квалифицированные коучи, работающие в образно-трансформационном и интегративном подходе. Мы объединяем международный опыт, сильную методологию и живую работу с запросами клиентов — от личностного роста до бизнес-целей.
+                        </p>
+                    </article>
+                    <div class="team__list">
+                        <div class="team__item">
+                            <img class="team__image" src="#" alt="team">
+                            <div class="team__content">
+                                <h4 class="team__name">
+                                    Иченко Мария Андреевна
+                                </h4>
+                                <p class="team__text">
+                                    Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team__item">
+                            <img class="team__image" src="#" alt="team">
+                            <div class="team__content">
+                                <h4 class="team__name">
+                                    Иченко Мария Андреевна
+                                </h4>
+                                <p class="team__text">
+                                    Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team__item">
+                            <img class="team__image" src="#" alt="team">
+                            <div class="team__content">
+                                <h4 class="team__name">
+                                    Иченко Мария Андреевна
+                                </h4>
+                                <p class="team__text">
+                                    Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team__item">
+                            <img class="team__image" src="#" alt="team">
+                            <div class="team__content">
+                                <h4 class="team__name">
+                                    Иченко Мария Андреевна
+                                </h4>
+                                <p class="team__text">
+                                    Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team__item">
+                            <img class="team__image" src="#" alt="team">
+                            <div class="team__content">
+                                <h4 class="team__name">
+                                    Иченко Мария Андреевна
+                                </h4>
+                                <p class="team__text">
+                                    Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team__item">
+                            <img class="team__image" src="#" alt="team">
+                            <div class="team__content">
+                                <h4 class="team__name">
+                                    Иченко Мария Андреевна
+                                </h4>
+                                <p class="team__text">
+                                    Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="club-blog">
-            <div class="club-blog__container">
-                <div class="club-blog__club">Клуб CL</div>
-                <div class="club-blog__blog">Наш блог</div>
+        <section class="services section">
+            <div class="container">
+                <div class="services__wrapper">
+                    <article class="services__article">
+                        <h2 class="services__title">
+                            Наши услуги
+                        </h2>
+                        <p class="services__text">
+                            Наши команда работает в сфере life-style коучинг в онлайн и оффлайн форматах.
+                        </p>
+                    </article>
+                    <div class="services__list">
+                        <div class="services__item">
+                            <picture>
+                                <img src="#" alt="изображение услуги" class="services__img">
+                            </picture>
+                            <article class="services__item--article">
+                                <h3 class="services__item--title">
+                                    Индивидуальный коучинг
+                                </h3>
+                                <p class="services__item--subtitle">
+                                    Предполагает персональную работу с клиентом, где коуч помогает разобраться с запросом 
+                                </p>
+                                <a href="#" class="services__item--link">Узнать подробнее</a>
+                            </article>
+                        </div>
+                        <div class="services__item">
+                            <picture>
+                                <img src="#" alt="изображение услуги" class="services__img">
+                            </picture>
+                            <article class="services__item--article">
+                                <h3 class="services__item--title">
+                                    Индивидуальный коучинг
+                                </h3>
+                                <p class="services__item--subtitle">
+                                    Предполагает персональную работу с клиентом, где коуч помогает разобраться с запросом 
+                                </p>
+                                <a href="#" class="services__item--link">Узнать подробнее</a>
+                            </article>
+                        </div>
+                        <div class="services__item">
+                            <picture>
+                                <img src="#" alt="изображение услуги" class="services__img">
+                            </picture>
+                            <article class="services__item--article">
+                                <h3 class="services__item--title">
+                                    Индивидуальный коучинг
+                                </h3>
+                                <p class="services__item--subtitle">
+                                    Предполагает персональную работу с клиентом, где коуч помогает разобраться с запросом 
+                                </p>
+                                <a href="#" class="services__item--link">Узнать подробнее</a>
+                            </article>
+                        </div>
+                        <div class="services__item">
+                            <picture>
+                                <img src="#" alt="изображение услуги" class="services__img">
+                            </picture>
+                            <article class="services__item--article">
+                                <h3 class="services__item--title">
+                                    Индивидуальный коучинг
+                                </h3>
+                                <p class="services__item--subtitle">
+                                    Предполагает персональную работу с клиентом, где коуч помогает разобраться с запросом 
+                                </p>
+                                <a href="#" class="services__item--link">Узнать подробнее</a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="events">
-            <div class="events__container">
-                <h2 class="events__title">Мероприятия</h2>
-                <div class="events__list">...</div>
+        <section class="edu section">
+            <div class="container">
+                <div class="edu__wrapper">
+                    <picture>
+                        <img src="#" alt="Обучение изображение" class="edu__img">
+                    </picture>
+                    <article class="edu__article">
+                        <h2 class="edu__title">
+                            Обучение коучингу
+                        </h2>
+                        <ul class="edu__list">
+                            <li class="edu__item">
+                                <p class="edu__text">
+                                    Образно-трансформационный подход, аккредитованный всемирно известной европейской ассоциацией HiSTES.
+                                </p>
+                            </li>
+                            <li class="edu__item">
+                                <p class="edu__text">
+                                    70% практики, которую вы сразу начнете применять.
+                                </p>
+                            </li>
+                            <li class="edu__item">
+                                <p class="edu__text">
+                                    Возможность интеграции: вы работаете как с клиентами, так и со своими темами.
+                                </p>
+                            </li>
+                            <li class="edu__item">
+                                <p class="edu__text">
+                                    Гибкий формат: онлайн- и оффлайн-программы.
+                                </p>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn__white">Подробнее</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="store section">
+            <div class="container">
+                <div class="store__wrapper">
+                    <div class="store__banner">
+                        <article class="store__article">
+                            <h2 class="store__title">
+                                Медиатека ISL:<br>витрина решений
+                            </h2>
+                            <p class="store__subtitle">
+                                Здесь собраны инструменты, с которыми мы работаем в ISL: визуальные инсайт-карты, книги, авторские пособия и материалы.
+                            </p>
+                            <a href="#" class="btn btn__blue">Перейти к каталогу</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="club section">
+            <div class="container">
+                <div class="club__wrapper">
+                    <article class="club__article">
+                        <h2 class="club__title">
+                            Клуб ISL
+                        </h2>
+                        <p class="club__subtitle">
+                            Бестселлера – абонемент на 3 месяца
+                        </p>
+                        <ul class="club__list">
+                            <li class="club__item">
+                                <p class="club__text">
+                                    Безлимитное посещение мероприятий.
+                                </p>
+                            </li>
+                            <li class="club__item">
+                                <p class="club__text">
+                                    Система скидок и подарков.
+                                </p>
+                            </li>
+                            <li class="club__item">
+                                <p class="club__text">
+                                    Поддерживающая среда и единомышленники.
+                                </p>
+                            </li>
+                            <li class="club__item">
+                                <p class="club__text">
+                                    Подарочная сессия с коучем.
+                                </p>
+                            </li>
+                        </ul>
+                        <button class="btn btn__blue">Оставить заявку</button>
+                    </article>
+                    <picture>
+                        <img src="#" alt="Обучение изображение" class="club__img">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="news section">
+            <div class="container">
+                <div class="news__wrapper">
+                    <article class="news__article">
+                        <h2 class="news__title">
+                            Наш блог
+                        </h2>
+                        <p class="news__text">
+                            Здесь мы делимся ценными знаниями, идеями и практиками, которые помогут вам на пути к осознанности, личностному развитию и трансформации. Каждый материал – это шаг к раскрытию вашего потенциала, достижению гармонии и успеха в жизни. Исследуйте, учитесь и развивайтесь вместе с нами!
+                        </p>
+                    </article>
+                    <div class="news__list">
+                        <div class="news__item">
+                            <picture>
+                                <img src="#" alt="картинка новости" class="news__img">
+                            </picture>
+                            <article class="news__article">
+                                <p class="news__date">12 апреля, 2025</p>
+                                <h3 class="news__title">Что такое "Психомафия" и почему на неё стоит пойти?</h3>
+                                <a href="#" class="news__link">подробнее</a>
+                            </article>
+                        </div>
+                        <div class="news__item">
+                            <picture>
+                                <img src="#" alt="картинка новости" class="news__img">
+                            </picture>
+                            <article class="news__article">
+                                <p class="news__date">12 апреля, 2025</p>
+                                <h3 class="news__title">Что такое "Психомафия" и почему на неё стоит пойти?</h3>
+                                <a href="#" class="news__link">подробнее</a>
+                            </article>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn__blue">Читать все новости</a>
+                </div>
+            </div>
+        </section>
+        <section class="event section">
+            <div class="container">
+                <div class="event__wrapper">
+                    <article class="event__article">
+                        <h2 class="event__title">
+                            Мероприятия
+                        </h2>
+                        <p class="news__text">
+                            Здесь вы найдете список ближайших мероприятий, которые помогут вам развить навыки коучинга, глубже понять психологию и улучшить свою жизнь.
+                        </p>
+                    </article>
+                    <div class="event__list">
+                        <div class="event__item">
+                            <p class="event__date">
+                                6 апреля, 2025 — <span class="event__category">Игра</span> 
+                            </p>
+                            <h4 class="event__title">
+                                Трансформационная игра «Жизнь»
+                            </h4>
+                            <p class="event__subtitle">
+                                Исследуйте свои преграды на пути к своей цели и найдите решения для ее достижения через игру.
+                            </p>
+                        </div>
+                        <div class="event__item">
+                            <p class="event__date">
+                                20 апреля, 2025 — <span class="event__category">Коучинг</span> 
+                            </p>
+                            <h4 class="event__title">
+                                Обучение МАК-коучинг «Я и Деньги»
+                            </h4>
+                            <p class="event__subtitle">
+                                Узнайте, как работать с метафорическими картами, чтобы раскрыть финансовые блоки и выстроить здоровые отношения с деньгами.
+                            </p>
+                        </div>
+                        <div class="event__item">
+                            <p class="event__date">
+                                26 апреля, 2025 — <span class="event__category">Игра</span> 
+                            </p>
+                            <h4 class="event__title">
+                                Психологическая игра «ПСИХОмафия»
+                            </h4>
+                            <p class="event__subtitle">
+                                Игра-тренинг, направленная на развитие эмоционального интеллекта, выявления скрытых мотивов поведения и манипуляций.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn btn__blue">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+        <section class="contact section">
+            <div class="container">
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <article class="contact__article">
+                            <h2 class="contact__title">
+                                Контакты
+                            </h2>
+                            <p class="contact__subtitle">
+                                Оставляйте ваши заявки, мы свяжемся с Вами в течений 5 минут!
+                            </p>
+                        </article>
+                        <div class="contact__list">
+                            <div class="contact__item">
+                                <p class="contact__item--title">Email:</p>
+                                <a href="mailto:blinkdewalker0708@gmail.com" class="contact__item--link">
+                                    blinkdewalker0708@gmail.com
+                                </a>
+                            </div>
+                            <div class="contact__item">
+                                <p class="contact__item--title">Телефон:</p>
+                                <a href="tel:88005553555" class="contact__item--link">
+                                    +7 (800) 555 35-55
+                                </a>
+                            </div>
+                            <div class="contact__item">
+                                <p class="contact__item--title">Наша локация:</p>
+                                <a href="#" class="contact__item--link">
+                                    Россия. г. Ростов-на-Дону., ул. Орбитальная 54
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form">
+                        <div class="form__wrapper">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form__wrapper">
+                            <label for="email">Ваш email</label>
+                            <input type="email" name="email" id="email" placeholder="example@youmail.com" required>
+                        </div>
+                        <div class="form__wrapper">
+                            <label for="phone">Ваш телефон</label>
+                            <input type="tel" name="phone" id="phone" placeholder="+7 (800) 555 35-55" required>
+                        </div>
+                        <div class="form__wrapper">
+                            <label for="message">Ваше сообщение</label>
+                            <textarea name="message" id="message" placeholder="Я хотел бы уточнить по поводу..." required></textarea>
+                        </div>
+                        <div class="form__checkbox-wrapper">
+                            <input class="form__privacy--checkbox" type="checkbox" name="privacy" id="privacy" checked>
+                            <label class="form__privacy--label" for="privacy">
+                                Нажимая кнопку, я согласен с <a href="/privacy">политика конфиденциальности</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn__blue">Отправить заявку</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+<!--main end-->
+
+<!--footer start-->
     <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__contacts">Контакты</div>
-            <form class="footer__form">
-                <input class="footer__form-input" type="text" placeholder="Имя">
-                <input class="footer__form-input" type="email" placeholder="Email">
-                <textarea class="footer__form-textarea" placeholder="Сообщение"></textarea>
-                <button class="footer__form-button" type="submit">Отправить</button>
-            </form>
-        </div>
-        <div class="footer__copyright">
-            &copy; 2025 CoalchingLab
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__logo">
+                    <img src="#" alt="logo">
+                </div>
+                <p class="footer__text">
+                    Copyright © 2025 ISL Coalching | All Rights Reserved | Сайт разработан <a href="#" target="_blank">tkaachev.ru</a> |  <a href="/privacy">Политика конфиденциальности</a>
+                </p>
+            </div>
         </div>
     </footer>
+<!--footer end-->
 </body>
 </html>
