@@ -251,6 +251,7 @@
                 </div>
             </div>
         </section>
+
         <section class="rewiews section">
             <div class="container">
                 <div class="rewiews__wrapper">
@@ -356,10 +357,14 @@
                 </div>
             </div>
         </section>
+
         <section class="course section">
             <div class="container">
                 <div class="course__wrapper">
-                    <img class="course__image" src="./assets/default_content/example_course.webp" alt="course">
+                    <div class="course__img-wrap">
+                        <div class="course__img-shadow"></div>
+                        <img class="course__image" src="./assets/default_content/example_course.webp" alt="course">
+                    </div>
                     <div class="course__content">
                         <article class="course__article">
                             <h2 class="course__title">
@@ -368,14 +373,15 @@
                             <p class="course__text">
                                 Тест с описанием теста, тест будет открываться в модальном окне, ориентировочно планируется ставить платный виджет “марквиз” также можно и самописное решение, но это дольше и дороже.
                             </p>
-                            <a href="#" class="btn btn__blue">
-                                забрать гайд
-                            </a>
                         </article>
+                        <a href="#" class="btn btn__blue btn__course">
+                            забрать гайд
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="about section">
             <div class="container">
                 <div class="about__wrapper">
@@ -395,29 +401,35 @@
                             </a>
                         </div>
                     </article>
-                    <img class="about__image" src="#" alt="about">
+                    <div class="about__img-wrap">
+                        <div class="about__img-shadow"></div>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/default_content/example_about_mob.webp">
+                            <img class="about__image" src="./assets/default_content/example_about.webp" alt="about">
+                        </picture>
+                    </div>
                     <div class="about__content">
                         <div class="about__content-item">
-                            <h3 class="about__content-title">
+                            <h4 class="about__content-title">
                                 Коучинг
-                            </h3>
+                            </h4>
                             <ul class="about__content-list">
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Коучинг личных отношений
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Коучинг профессионального развития
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Коучинг личной эффективности
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         И многое другое
                                     </p>
@@ -425,26 +437,26 @@
                             </ul>
                         </div>
                         <div class="about__content-item">
-                            <h3 class="about__content-title">
+                            <h4 class="about__content-title">
                                 Обучение
-                            </h3>
+                            </h4>
                             <ul class="about__content-list">
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Обучение коучингу с применением МАК
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Обучение лайф-коучингу отношений в паре
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Обучение бизнес консалтингу и коучингу
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         И многое другое
                                     </p>
@@ -452,26 +464,26 @@
                             </ul>
                         </div>
                         <div class="about__content-item">
-                            <h3 class="about__content-title">
+                            <h4 class="about__content-title">
                                 Трансформационные игры:
-                            </h3>
+                            </h4>
                             <ul class="about__content-list">
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Психологическая игра «Психомафия»
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Коучинговая игра «Грани конфликта»
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         Трансформационная игра «Жизнь»
                                     </p>
                                 </li>
-                                <li class="about__content-item">
+                                <li class="about__content-list__item">
                                     <p class="about__content-text">
                                         И многое другое
                                     </p>
@@ -482,6 +494,7 @@
                 </div>
             </div>
         </section>
+
         <section class="team section">
             <div class="container">
                 <div class="team__wrapper">
@@ -495,67 +508,85 @@
                     </article>
                     <div class="team__list">
                         <div class="team__item">
-                            <img class="team__image" src="#" alt="team">
+                            <div class="team__image-wrap">
+                                <div class="team__image-shadow"></div>
+                                <img class="team__image" src="./assets/default_content/example_command.webp" alt="team">
+                            </div>
                             <div class="team__content">
                                 <h4 class="team__name">
                                     Иченко Мария Андреевна
                                 </h4>
-                                <p class="team__text">
+                                <p class="team__subtitle">
                                     Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
                                 </p>
                             </div>
                         </div>
                         <div class="team__item">
-                            <img class="team__image" src="#" alt="team">
+                            <div class="team__image-wrap">
+                                <div class="team__image-shadow"></div>
+                                <img class="team__image" src="./assets/default_content/example_command.webp" alt="team">
+                            </div>
                             <div class="team__content">
                                 <h4 class="team__name">
                                     Иченко Мария Андреевна
                                 </h4>
-                                <p class="team__text">
+                                <p class="team__subtitle">
                                     Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
                                 </p>
                             </div>
                         </div>
                         <div class="team__item">
-                            <img class="team__image" src="#" alt="team">
+                            <div class="team__image-wrap">
+                                <div class="team__image-shadow"></div>
+                                <img class="team__image" src="./assets/default_content/example_command.webp" alt="team">
+                            </div>
                             <div class="team__content">
                                 <h4 class="team__name">
                                     Иченко Мария Андреевна
                                 </h4>
-                                <p class="team__text">
+                                <p class="team__subtitle">
                                     Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
                                 </p>
                             </div>
                         </div>
                         <div class="team__item">
-                            <img class="team__image" src="#" alt="team">
+                            <div class="team__image-wrap">
+                                <div class="team__image-shadow"></div>
+                                <img class="team__image" src="./assets/default_content/example_command.webp" alt="team">
+                            </div>
                             <div class="team__content">
                                 <h4 class="team__name">
                                     Иченко Мария Андреевна
                                 </h4>
-                                <p class="team__text">
+                                <p class="team__subtitle">
                                     Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
                                 </p>
                             </div>
                         </div>
                         <div class="team__item">
-                            <img class="team__image" src="#" alt="team">
+                            <div class="team__image-wrap">
+                                <div class="team__image-shadow"></div>
+                                <img class="team__image" src="./assets/default_content/example_command.webp" alt="team">
+                            </div>
                             <div class="team__content">
                                 <h4 class="team__name">
                                     Иченко Мария Андреевна
                                 </h4>
-                                <p class="team__text">
+                                <p class="team__subtitle">
                                     Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
                                 </p>
                             </div>
                         </div>
                         <div class="team__item">
-                            <img class="team__image" src="#" alt="team">
+                            <div class="team__image-wrap">
+                                <div class="team__image-shadow"></div>
+                                <img class="team__image" src="./assets/default_content/example_command.webp" alt="team">
+                            </div>
                             <div class="team__content">
                                 <h4 class="team__name">
                                     Иченко Мария Андреевна
                                 </h4>
-                                <p class="team__text">
+                                <p class="team__subtitle">
                                     Практикующий коуч и психолог, интегративный коуч, МАК-коуч, ведущая трансформационный игр
                                 </p>
                             </div>
@@ -564,6 +595,7 @@
                 </div>
             </div>
         </section>
+
         <section class="services section">
             <div class="container">
                 <div class="services__wrapper">
@@ -636,6 +668,7 @@
                 </div>
             </div>
         </section>
+
         <section class="edu section">
             <div class="container">
                 <div class="edu__wrapper">
@@ -673,6 +706,7 @@
                 </div>
             </div>
         </section>
+
         <section class="store section">
             <div class="container">
                 <div class="store__wrapper">
@@ -690,6 +724,7 @@
                 </div>
             </div>
         </section>
+
         <section class="club section">
             <div class="container">
                 <div class="club__wrapper">
@@ -730,6 +765,7 @@
                 </div>
             </div>
         </section>
+
         <section class="news section">
             <div class="container">
                 <div class="news__wrapper">
@@ -767,6 +803,7 @@
                 </div>
             </div>
         </section>
+
         <section class="event section">
             <div class="container">
                 <div class="event__wrapper">
@@ -817,6 +854,7 @@
                 </div>
             </div>
         </section>
+
         <section class="contact section">
             <div class="container">
                 <div class="contact__wrapper">
