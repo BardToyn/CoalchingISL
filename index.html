@@ -702,16 +702,16 @@
                                 </p>
                             </li>
                         </ul>
-                        <a href="#" class="btn btn__white">Подробнее</a>
+                        <a href="#" class="btn btn__white edu__btn">Подробнее</a>
                     </article>
                 </div>
             </div>
         </section>
-
+        <!--store-->
         <section class="store section">
             <div class="container">
                 <div class="store__wrapper">
-                    <div class="store__banner">
+                    <div class="store__banner" style="background-image: url(./assets/default_content/example_store.webp);">
                         <article class="store__article">
                             <h2 class="store__title">
                                 Медиатека ISL:<br>витрина решений
@@ -721,11 +721,12 @@
                             </p>
                             <a href="#" class="btn btn__blue">Перейти к каталогу</a>
                         </article>
+                        <div class="store__banner-shadow"></div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <!--club-->
         <section class="club section">
             <div class="container">
                 <div class="club__wrapper">
@@ -737,22 +738,22 @@
                             Бестселлера – абонемент на 3 месяца
                         </p>
                         <ul class="club__list">
-                            <li class="club__item">
+                            <li class="club__item li__dotted">
                                 <p class="club__text">
                                     Безлимитное посещение мероприятий.
                                 </p>
                             </li>
-                            <li class="club__item">
+                            <li class="club__item li__dotted">
                                 <p class="club__text">
                                     Система скидок и подарков.
                                 </p>
                             </li>
-                            <li class="club__item">
+                            <li class="club__item li__dotted">
                                 <p class="club__text">
                                     Поддерживающая среда и единомышленники.
                                 </p>
                             </li>
-                            <li class="club__item">
+                            <li class="club__item li__dotted">
                                 <p class="club__text">
                                     Подарочная сессия с коучем.
                                 </p>
@@ -761,12 +762,12 @@
                         <button class="btn btn__blue">Оставить заявку</button>
                     </article>
                     <picture>
-                        <img src="#" alt="Обучение изображение" class="club__img">
+                        <img src="./assets/default_content/example_services.webp" alt="Обучение изображение" class="edu__img">
                     </picture>
                 </div>
             </div>
         </section>
-
+        <!--news-->
         <section class="news section">
             <div class="container">
                 <div class="news__wrapper">
@@ -781,30 +782,30 @@
                     <div class="news__list">
                         <div class="news__item">
                             <picture>
-                                <img src="#" alt="картинка новости" class="news__img">
+                                <img src="./assets/default_content/example_news.webp" alt="картинка новости" class="news__img">
                             </picture>
-                            <article class="news__article">
-                                <p class="news__date">12 апреля, 2025</p>
-                                <h3 class="news__title">Что такое "Психомафия" и почему на неё стоит пойти?</h3>
-                                <a href="#" class="news__link">подробнее</a>
+                            <article class="news__item-article">
+                                <p class="news__date date">12 апреля, 2025</p>
+                                <h3 class="news__item-title">Что такое "Психомафия" и почему на неё стоит пойти?</h3>
+                                <a href="#" class="news__link btn__arrow--blue">подробнее</a>
                             </article>
                         </div>
                         <div class="news__item">
                             <picture>
-                                <img src="#" alt="картинка новости" class="news__img">
+                                <img src="./assets/default_content/example_news.webp" alt="картинка новости" class="news__img">
                             </picture>
-                            <article class="news__article">
-                                <p class="news__date">12 апреля, 2025</p>
-                                <h3 class="news__title">Что такое "Психомафия" и почему на неё стоит пойти?</h3>
-                                <a href="#" class="news__link">подробнее</a>
+                            <article class="news__item-article">
+                                <p class="news__date date">12 апреля, 2025</p>
+                                <h3 class="news__item-title">Что такое "Психомафия" и почему на неё стоит пойти?</h3>
+                                <a href="#" class="news__link btn__arrow--blue">подробнее</a>
                             </article>
                         </div>
                     </div>
-                    <a href="#" class="btn btn__blue">Читать все новости</a>
+                    <a href="#" class="btn__news btn btn__blue">Читать все новости</a>
                 </div>
             </div>
         </section>
-
+        <!--event-->
         <section class="event section">
             <div class="container">
                 <div class="event__wrapper">
@@ -812,7 +813,7 @@
                         <h2 class="event__title">
                             Мероприятия
                         </h2>
-                        <p class="news__text">
+                        <p class="event__text">
                             Здесь вы найдете список ближайших мероприятий, которые помогут вам развить навыки коучинга, глубже понять психологию и улучшить свою жизнь.
                         </p>
                     </article>
@@ -821,7 +822,7 @@
                             <p class="event__date">
                                 6 апреля, 2025 — <span class="event__category">Игра</span> 
                             </p>
-                            <h4 class="event__title">
+                            <h4 class="event__item-title">
                                 Трансформационная игра «Жизнь»
                             </h4>
                             <p class="event__subtitle">
@@ -855,7 +856,7 @@
                 </div>
             </div>
         </section>
-
+        <!--contact-->
         <section class="contact section">
             <div class="container">
                 <div class="contact__wrapper">
@@ -891,25 +892,25 @@
                     </div>
                     <form class="contact__form">
                         <div class="form__wrapper">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                            <label class="form__label" for="name">Ваше имя</label>
+                            <input class="form__input" type="text" name="name" id="name" placeholder="Иван Иванов" required>
                         </div>
                         <div class="form__wrapper">
-                            <label for="email">Ваш email</label>
-                            <input type="email" name="email" id="email" placeholder="example@youmail.com" required>
+                            <label class="form__label" for="email">Ваш email</label>
+                            <input class="form__input" type="email" name="email" id="email" placeholder="example@youmail.com" required>
                         </div>
                         <div class="form__wrapper">
-                            <label for="phone">Ваш телефон</label>
-                            <input type="tel" name="phone" id="phone" placeholder="+7 (800) 555 35-55" required>
+                            <label class="form__label" for="phone">Ваш телефон</label>
+                            <input class="form__input" type="tel" name="phone" id="phone" placeholder="+7 (800) 555 35-55" required>
                         </div>
                         <div class="form__wrapper">
-                            <label for="message">Ваше сообщение</label>
-                            <textarea name="message" id="message" placeholder="Я хотел бы уточнить по поводу..." required></textarea>
+                            <label class="form__label" for="message">Ваше сообщение</label>
+                            <textarea class="form__input" name="message" id="message" placeholder="Я хотел бы уточнить по поводу..." required></textarea>
                         </div>
                         <div class="form__checkbox-wrapper">
                             <input class="form__privacy--checkbox" type="checkbox" name="privacy" id="privacy" checked>
                             <label class="form__privacy--label" for="privacy">
-                                Нажимая кнопку, я согласен с <a href="/privacy">политика конфиденциальности</a>
+                                Нажимая кнопку, я согласен с <a href="/privacy">политикой конфиденциальности</a> 
                             </label>
                         </div>
                         <button type="submit" class="btn btn__blue">Отправить заявку</button>
@@ -924,8 +925,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer__logo">
-                    <img src="#" alt="logo">
+                <div class="header__logo">
+                    <img class="logo" src="./assets/default_content/logo.webp" alt="logo">
                 </div>
                 <p class="footer__text">
                     Copyright © 2025 ISL Coalching | All Rights Reserved | Сайт разработан <a href="#" target="_blank">tkaachev.ru</a> |  <a href="/privacy">Политика конфиденциальности</a>

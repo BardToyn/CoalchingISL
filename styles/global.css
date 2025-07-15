@@ -188,6 +188,24 @@ img {
     background-size: cover;
 }
 
+.date {
+    display: flex;
+    align-items: center;
+}
+
+.date::before {
+    content: '';
+
+    margin-right: 4px;
+
+    width: 15px;
+    height: 15px;
+
+    display: block;
+
+    background: no-repeat url(../assets/icons/calendar.svg) center / cover;
+}
+
 @media screen and (max-width: 1380px) {
 
     button {
