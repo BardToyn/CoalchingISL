@@ -136,6 +136,58 @@ img {
     background-color: var(--clr-blue-hover);
 }
 
+.btn__arrow--blue {
+    display: flex;
+    align-items: center;
+}
+
+.btn__arrow--blue::after {
+    margin-left: 4px;
+    content: '';
+
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    background: no-repeat url(../assets/icons/arrow_blue.svg) center / cover;
+    transition: .3s ease-in-out;
+}
+
+.btn__arrow--blue:hover::after {
+    margin-left: 8px;
+}
+
+.btn__arrow--white::after {
+    content: '';
+
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    background: no-repeat url(../assets/icons/arrow_white.svg) center / cover;
+}
+
+.li__dotted {
+    position: relative;
+    padding-left: 20px;
+}
+
+.li__dotted::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0.4em;
+    
+    width: 12px;
+    height: 12px;
+    
+    background: url(../assets/icons/dods_item.svg) no-repeat center center;
+    background-size: cover;
+}
+
 @media screen and (max-width: 1380px) {
 
     button {
