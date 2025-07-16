@@ -1227,7 +1227,7 @@
 
 .form__checkbox-wrapper .form__privacy--checkbox + .form__privacy--label {
     position: relative;
-    display: flex;
+    display: inline-block;
     align-items: flex-start;
     cursor: pointer;
     font-size: 14px;
@@ -1294,31 +1294,4 @@
         gap: 64px;
     }
 
-}
-
-/*footer*/
-
-.footer {
-    margin-top: 80px;
-
-    border-top: 1px solid var(--clr-white-hover);
-}
-
-.footer__wrapper {
-    padding: 24px 0px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer__text {
-    color: var(--clr-gray);
-}
-
-.footer__text a {
-    color: var(--clr-gray);
-
-    text-decoration: underline;
 }
